@@ -14,8 +14,18 @@ body {
     align-items: center;
 }
 
+.left-container {
+    position: relative;
+}
+
 img {
     height: 100vh;
     width: auto;
-    position: relative;
+}
+
+.logo-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
 }
