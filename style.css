@@ -1,3 +1,13 @@
+:root {
+    --main-color: rgb(100, 150, 100);
+    --secondary-color: rgba(0, 0, 0, 0.5);
+    --gap: 1rem;
+    --logo-banner-background-color: var(--secondary-color);
+    --logo-size: 5rem;
+    --logo-font-size: 2.5rem;
+    --font-size: 1rem;
+}
+
 * {
     font-family: 'Courier New', monospace;
 }
@@ -16,26 +26,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
 }
 
 .background {
-    height: 100vh;
-    width: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .logo-banner {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--logo-banner-background-color);
+    width: 100%;
+    gap: var(--gap);
 }
 
 .logo {
-    height: 5rem;
-    width: 5rem;
-    margin-right: 1rem;
+    height: var(--logo-size);
 }
 
 .logo-text {
-    font-size: 2.5rem;
-    color: #649664;
+    font-size: var(--logo-font-size);
+    color: var(--main-color);
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
 }
