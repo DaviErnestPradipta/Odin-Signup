@@ -27,28 +27,46 @@
         <div class="middle-container">
             <strong>Let's do this!</strong>
             <form action="link" method="post">
-                <label for="first">First Name</label>
-                <input type="text" id="first" pattern="[A-Z][a-z]*" 
-                title="Start with a capital letter" required>
-                <label for="last">Last Name</label>
-                <input type="text" id="last" pattern="[A-Z][a-z]*" 
-                title="Start with a capital letter" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
-                <label for="number">Phone Number</label>
-                <input type="text" id="number" pattern="0\d{10}" 
-                title="0 followed by 10 digits" 
-                required>
-                <label for="password">Password</label>
-                <input type="password" id="password" 
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}" 
-                title="8-16 characters, uppercase, lowercase, number, special character" 
-                required>
-                <label for="confirm">Confirm Password</label>
-                <input type="password" id="confirm" 
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}" 
-                title="8-16 characters, uppercase, lowercase, number, special character" 
-                required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first">First Name</label>
+                        <input type="text" id="first" pattern="[A-Z][a-z]*" 
+                        title="Start with a capital letter" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last">Last Name</label>
+                        <input type="text" id="last" pattern="[A-Z][a-z]*" 
+                        title="Start with a capital letter" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Phone Number</label>
+                        <input type="text" id="number" pattern="0\d{10}" 
+                        title="0 followed by 10 digits" 
+                        required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" 
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}" 
+                        title="8-16 characters, uppercase, lowercase, number, special character" 
+                        required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm">Confirm Password</label>
+                        <input type="password" id="confirm" 
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}" 
+                        title="8-16 characters, uppercase, lowercase, number, special character" 
+                        required>
+                    </div>
+                </div>
                 <button type="submit" class="button">Create Account</button>
             </form>
         </div>
