@@ -60,6 +60,16 @@ body {
 .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 100vh;
+}
+
+input:invalid {
+    border: 2px solid red;
+    outline: none;
+}
+
+input:valid {
+    border: 2px solid green;
+    outline: none;
 }
