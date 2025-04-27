@@ -1,11 +1,21 @@
 :root {
-    --main-color: rgb(100, 150, 100);
-    --secondary-color: rgba(0, 0, 0, 0.5);
+    --first-color: rgb(100, 150, 100);
+    --second-color: rgba(0, 0, 0, 0.5);
+    --third-color: rgb(250, 50, 50);
+    --fourth-color: rgb(50, 150, 250);
+    --fifth-color: rgb(0, 0, 0);
+    --sixth-color: rgb(255, 255, 255);
     --gap: 1rem;
-    --logo-banner-background-color: var(--secondary-color);
+    --banner-color: var(--second-color);
     --logo-size: 5rem;
     --logo-font-size: 2.5rem;
     --font-size: 1rem;
+    --horizontal-margin: 0 5rem;
+    --vertical-margin: 1rem 0;
+    --padding: 0.5rem;
+    --focus-shadow: 0 0 0 0.125rem var(--fourth-color);
+    --invalid-border: 0.125rem solid var(--third-color);
+    --valid-border: 0.125rem solid var(--first-color);
 }
 
 * {
@@ -43,7 +53,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--logo-banner-background-color);
+    background-color: var(--banner-color);
     width: 100%;
     gap: var(--gap);
 }
@@ -54,7 +64,7 @@ body {
 
 .logo-text {
     font-size: var(--logo-font-size);
-    color: var(--main-color);
+    color: var(--first-color);
 }
 
 .right-container {
@@ -62,18 +72,18 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    padding: 0 5rem;
+    margin: var(--horizontal-margin);
 }
 
 .middle-container {
-    margin: 5rem 0;
+    margin: var(--vertical-margin);
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
-    margin: 1rem 0;
+    margin: var(--vertical-margin);
 }
 
 .form-row {
@@ -89,27 +99,38 @@ form {
 }
 
 .form-group label {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--vertical-margin);
 }
 
 .form-group input {
-    padding: 0.5rem;
+    padding: var(--padding);
     font-size: var(--font-size);
+    box-sizing: border-box;
 }
 
-button {
-    margin-top: 1rem;
-    padding: 0.75rem;
-    font-size: var(--font-size);
-    cursor: pointer;
+input:focus {
+    box-shadow: var(--focus-shadow);
 }
 
 input:invalid {
-    border: 2px solid red;
-    outline: none;
+    border: var(--invalid-border);  
 }
 
 input:valid {
-    border: 2px solid green;
-    outline: none;
+    border: var(--valid-border);
+}
+
+button {
+    margin: var(--vertical-margin);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    cursor: pointer;
+    background-color: var(--first-color);
+    color: var(--sixth-color);
+    border: var(--valid-border);
+}
+
+a {
+    text-decoration: none;
+    color: var(--first-color);
 }
